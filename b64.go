@@ -20,7 +20,7 @@ func (m *B64) UnmarshalText(c []byte) error {
 	return err
 }
 
-func (m B64) Marshal() ([]byte, error) {
+func (m B64) MarshalJSON() ([]byte, error) {
 	return []byte(`"` + base64.StdEncoding.EncodeToString(m) + `"`), nil
 }
 func (m *B64) UnmarshalJSON(c []byte) error {

@@ -20,7 +20,7 @@ func (m *Hex) UnmarshalText(c []byte) error {
 	return err
 }
 
-func (m Hex) Marshal() ([]byte, error) {
+func (m Hex) MarshalJSON() ([]byte, error) {
 	return []byte(`"` + hex.EncodeToString(m) + `"`), nil
 }
 func (m *Hex) UnmarshalJSON(c []byte) error {
